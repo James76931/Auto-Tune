@@ -436,12 +436,12 @@ public class AutoTuneGUIShopUserCommand implements CommandExecutor {
 		ItemMeta iMeta = iStack.getItemMeta();
 		iMeta.setDisplayName(ChatColor.GOLD + itemName);
 		if (buy) {
-			iMeta.setLore(Arrays.asList((ChatColor.WHITE + "$" + df2.format(getItemPrice(itemName, false) * number)),
+			iMeta.setLore(Arrays.asList((ChatColor.WHITE + Config.getCurrencySymbol() + df2.format(getItemPrice(itemName, false) * number)),
 					(ChatColor.GRAY + "Purchase " + number + "x ")));
 			iStack.setItemMeta(iMeta);
 		}
 		if (!buy) {
-			iMeta.setLore(Arrays.asList((ChatColor.WHITE + "$" + df2.format(getItemPrice(itemName, true) * number)),
+			iMeta.setLore(Arrays.asList((ChatColor.WHITE + Config.getCurrencySymbol() + df2.format(getItemPrice(itemName, true) * number)),
 					(ChatColor.GRAY + "Sell " + number + "x ")));
 			iStack.setItemMeta(iMeta);
 		}
